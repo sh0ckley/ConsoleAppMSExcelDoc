@@ -56,7 +56,7 @@ namespace ConsoleAppMSExcelDoc
                             while (sqlDataReader.Read())
                             {
                                 string name = sqlDataReader.GetString(0);
-                                string price = sqlDataReader.GetString(1);
+                                int price = sqlDataReader.GetInt32(1);
 
                                 Console.Write(name +  " " + price + "\n");
                             }
