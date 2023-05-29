@@ -48,7 +48,7 @@ namespace ConsoleAppMSExcelDoc
                         }
                     }
 
-                    using (SqlCommand sqlCommand = new SqlCommand("SELECT Product_Name, Unit FROM Product", sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand("SELECT Product_Name, Price FROM Product", sqlConnection))
                     {
                         using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                         {
@@ -194,8 +194,7 @@ namespace ConsoleAppMSExcelDoc
                 }
                 catch (Exception)
                 {
-
-                    throw;
+                    Console.WriteLine("Error");
                 }
             }
             catch (SqlException ex)
